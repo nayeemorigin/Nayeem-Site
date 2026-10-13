@@ -62,3 +62,5 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:.75rem 2rem;justify-content:space-b
 footer a{color:var(--muted)}
 @media(max-width:760px){.cards,.steps,.fcols{grid-template-columns:1fr}.empty-card{grid-column:auto}.photo{margin:0 auto}.hero,.cols,.rows li{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}.hero{padding:2rem 0}}
 @media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+.photo { padding: 0; overflow: hidden; }
+.photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
