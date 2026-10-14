@@ -69,3 +69,6 @@ footer a{color:var(--muted)}
 .hero h1 .role { display: block; color: #111827; font-size: clamp(1.25rem, 3vw, 1.8rem); margin-top: .6rem; }
 /* All white background */
 @media (prefers-color-scheme: light) { body, header, .hero { background: #fff; } }
+.rows li:last-child {
+  border-bottom: none;
+}
