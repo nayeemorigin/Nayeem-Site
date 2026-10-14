@@ -63,13 +63,9 @@ footer a{color:var(--muted)}
 @media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 .photo { padding: 0; overflow: hidden; background: none; border: 0; box-shadow: none; border-radius: 0; }
 .photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
-/* Hero heading, orange name + white role */
+/* Hero heading: blue name + dark role, white background */
 .hero h1 { margin: 0 0 1rem; line-height: 1.1; }
-.hero h1 .name { display: block; color: #ff9a00; font-size: clamp(2.4rem, 6vw, 3.8rem); }
-.hero h1 .role { display: block; color: #fff; font-size: clamp(1.25rem, 3vw, 1.8rem); margin-top: .6rem; }
-/* Dark hero background */
-.hero { background: #0f0f10; border-radius: 16px; padding: 3rem 2.5rem; }
-.hero p { color: #d6d6d6; }
-.hero .stats b { color: #fff; }
-.hero .stats div { color: #b5b5b5; }
-.hero .btn.alt { color: #fff; border-color: #fff; }
+.hero h1 .name { display: block; color: var(--blue); font-size: clamp(2.4rem, 6vw, 3.8rem); }
+.hero h1 .role { display: block; color: #111827; font-size: clamp(1.25rem, 3vw, 1.8rem); margin-top: .6rem; }
+/* All white background */
+@media (prefers-color-scheme: light) { body, header, .hero { background: #fff; } }
