@@ -72,8 +72,6 @@ footer a{color:var(--muted)}
 .rows li:last-child {
   border-bottom: none;
 }
-/* Remove link underlines */
-a { text-decoration: none; }
-a:hover { text-decoration: underline; }
-/* Remove footer lines */
-footer, footer * { border-top: 0 !important; border-bottom: 0 !important; }
+a, a:visited { text-decoration: none !important; }
+a:hover { text-decoration: underline !important; }
+footer, footer *, .copy, .fcols { border-top: 0 !important; border-bottom: 0 !important; box-shadow: none !important; }
