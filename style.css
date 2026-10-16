@@ -75,3 +75,7 @@ footer a{color:var(--muted)}
 a, a:visited { text-decoration: none !important; }
 a:hover { text-decoration: underline !important; }
 footer, footer *, .copy, .fcols { border-top: 0 !important; border-bottom: 0 !important; box-shadow: none !important; }
+/* Wider site layout */
+.wrap { max-width: 1200px !important; width: 100%; padding-left: 1.5rem; padding-right: 1.5rem; box-sizing: border-box; }
+.hero { gap: 3rem; }
+.photo img { max-width: 520px; margin: 0 auto; }
