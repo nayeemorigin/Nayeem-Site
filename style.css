@@ -72,3 +72,8 @@ footer a{color:var(--muted)}
 .rows li:last-child {
   border-bottom: none;
 }
+/* Remove link underlines */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+/* Remove footer lines */
+footer, footer * { border-top: 0 !important; border-bottom: 0 !important; }
