@@ -4,17 +4,79 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Client Reviews | Nayeem Origin</title>
-<meta name="description" content="Reviews from clients who have worked with Nayeem Origin.">
+<meta name="description" content="Reviews from clients who have worked with Nayeem Origin, grouped by SEO service.">
 <meta property="og:title" content="Client Reviews | Nayeem Origin">
-<meta property="og:description" content="Reviews from clients who have worked with Nayeem Origin.">
+<meta property="og:description" content="Reviews from clients who have worked with Nayeem Origin, grouped by SEO service.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+body{background:#f6f9fe!important}
+header{background:#fff!important}
+a,a:hover{text-decoration:none!important}
+.rv-head{text-align:center;padding:3.2rem 0 2.6rem}
+.rv-kicker{display:inline-block;font:600 .82rem "Bricolage Grotesque",sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#2563eb;background:#e4edff;padding:.4rem .9rem;border-radius:999px;margin-bottom:1rem}
+.rv-head h1{margin:0 0 .8rem;color:#0b1a4a;font-size:clamp(2rem,4.4vw,3rem);line-height:1.15}
+.rv-head p{margin:0 auto;max-width:640px;color:#5b6b86;font-size:1.15rem}
+
+/* step-by-step flow */
+.rv-flow{position:relative}
+.rv-step{position:relative;margin-bottom:3.2rem}
+.rv-sh{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:.6rem 1rem;margin-bottom:1.3rem}
+.rv-sh h2{margin:0;color:#0b1a4a;font-size:1.65rem;line-height:1.2}
+.rv-sh p{margin:.25rem 0 0;max-width:none;color:#5b6b86}
+.rv-link{display:inline-flex;align-items:center;gap:.4rem;color:#2563eb;font:600 .96rem "Bricolage Grotesque",sans-serif}
+.rv-link svg{width:16px;height:16px;fill:none;stroke:#2563eb;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.rv-link:hover svg{transform:translateX(4px)}
+
+/* 4 cards in a row */
+.rv-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.rv-card{position:relative;display:flex;flex-direction:column;min-height:310px;overflow:hidden;background:linear-gradient(180deg,#fff 0%,#f6f9ff 100%);border:1px solid #dfe8f7;border-radius:20px;padding:1.8rem 1.5rem 1.4rem;box-shadow:0 6px 20px rgba(30,64,175,.07);opacity:0;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.rv-card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,#1e40af,#60a5fa)}
+.rv-card.in{opacity:1;animation:rvUp .7s ease var(--d,0s) backwards}
+@keyframes rvUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.rv-card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(30,64,175,.16);border-color:#b5cbf5}
+.rv-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.1rem}
+.rv-qb{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;padding-top:.55rem;background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;font:700 2.3rem/1 Georgia,serif;box-shadow:0 8px 16px rgba(37,99,235,.28)}
+.rv-sample{font:600 .64rem "Bricolage Grotesque",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#92400e;background:#fef3c7;padding:.22rem .55rem;border-radius:999px}
+.rv-stars{color:#f59e0b;font-size:1.15rem;letter-spacing:3px;margin:0 0 .8rem}
+.rv-text{margin:0 0 1.3rem;max-width:none;flex:1;color:#2b3a55;font-size:1.03rem;line-height:1.7}
+.rv-foot{display:flex;align-items:center;gap:.85rem;padding-top:1.1rem;border-top:1px dashed #d5e1f5}
+.rv-avatar{width:48px;height:48px;flex:none;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#e4edff,#cfe0ff);color:#1e40af;font:700 1rem "Bricolage Grotesque",sans-serif;box-shadow:0 0 0 3px #fff,0 0 0 5px #cfe0ff}
+.rv-who{min-width:0}
+.rv-who b{display:block;color:#0b1a4a;font:700 1.03rem "Bricolage Grotesque",sans-serif}
+.rv-who i{display:flex;align-items:center;gap:.3rem;font-style:normal;color:#5b6b86;font-size:.92rem;margin-top:.1rem}
+.rv-who svg{width:13px;height:13px;flex:none;fill:none;stroke:#2563eb;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media(prefers-reduced-motion:reduce){.rv-card{opacity:1}.rv-card.in{animation:none}.rv-card:hover{transform:none}}
+
+.rv-cta{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;margin:1rem 0 3rem;padding:1.8rem 2rem;background:#e9f0fd;border-radius:18px}
+.rv-cta h2{margin:0 0 .25rem;color:#0b1a4a;font-size:1.3rem}
+.rv-cta p{margin:0;max-width:none;color:#5b6b86}
+.rv-btn{display:inline-flex;align-items:center;gap:.5rem;background:#2563eb;color:#fff!important;font:600 1rem "Bricolage Grotesque",sans-serif;padding:.85rem 1.4rem;border-radius:8px;white-space:nowrap;box-shadow:0 6px 16px rgba(37,99,235,.28)}
+.rv-btn:hover{background:#1d4ed8}
+.rv-btn svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+@media(max-width:1100px){.rv-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.rv-sh h2{font-size:1.4rem}.rv-row{grid-template-columns:1fr}.rv-cta{flex-direction:column;align-items:flex-start;padding:1.4rem}.rv-head{padding-top:2.2rem}.rv-card{min-height:0}}
+</style>
 </head>
 <body>
 <header><div class="wrap"><a class="logo" href="index.html">Nayeem Origin</a><nav aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="case-studies.html">Case Studies</a><a href="reviews.html" aria-current="page">Reviews</a><a href="contact.html">Contact</a></nav><a class="btn sm" href="https://wa.me/8801758536741">Hire Me</a></div></header>
 <main><div class="wrap">
-<section><h1>Reviews</h1><div class="empty"><p>Client reviews are being added. You can message me to speak with past clients.</p><a class="btn" href="https://wa.me/8801758536741">Message me</a></div></section>
+
+<section class="rv-head">
+<span class="rv-kicker">Client Reviews</span>
+<h1>What clients say, service by service</h1>
+<p>Honest feedback from clients I have worked with, grouped by the service they hired me for.</p>
+</section>
+
+<div class="rv-flow" id="flow"></div>
+
+<section class="rv-cta">
+<div><h2>Worked with me before?</h2><p>Share your experience on WhatsApp and I will add your review here.</p></div>
+<a class="rv-btn" href="https://wa.me/8801758536741">Share your review <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</section>
+
 </div></main>
 <footer><div class="wrap fcols">
 <div><a class="logo" href="index.html">Nayeem Origin</a><p>SEO specialist in Bangladesh helping websites grow organic traffic and visibility.</p></div>
@@ -22,5 +84,52 @@
 <div><h3>Expertise</h3><a href="seo-audit.html">SEO Audit</a><a href="technical-seo.html">Technical SEO</a><a href="keyword-research.html">Keyword Research</a><a href="on-page-seo.html">On-page SEO</a><a href="off-page-seo.html">Off-page SEO</a><a href="local-seo.html">Local SEO</a><a href="aeo.html">AEO</a><a href="geo.html">GEO</a></div>
 <div><h3>Connect</h3><a href="https://wa.me/8801758536741">WhatsApp</a><a href="https://www.facebook.com/nayeemorigin">Facebook</a><a href="https://www.instagram.com/nayeemorigin">Instagram</a><a href="https://www.pinterest.com/nayeemorigin/">Pinterest</a></div>
 </div><div class="wrap copy">&copy; 2026 Nayeem Origin. All rights reserved.</div></footer>
+
+<script>
+/* =====================================================================
+   HOW TO ADD A REAL REVIEW
+   Each service below has 4 slots. Replace S (the sample) with a real review:
+     {t:"The client's review text", n:"Client Name", c:"Country"}
+   Delete a slot to show fewer cards. Only use reviews clients allowed you to share.
+   ===================================================================== */
+var S={t:"Replace this with a real client review.",n:"Client Name",c:"Country",s:1};
+var SERVICES=[
+{name:"SEO Audit",desc:"A full check of what holds a site back in Google.",url:"seo-audit.html",r:[S,S,S,S]},
+{name:"Technical SEO",desc:"Fixing crawling, indexing and site speed issues.",url:"technical-seo.html",r:[S,S,S,S]},
+{name:"Keyword Research",desc:"Finding the searches customers actually make.",url:"keyword-research.html",r:[S,S,S,S]},
+{name:"On-page SEO",desc:"Making every page clear to Google and useful to readers.",url:"on-page-seo.html",r:[S,S,S,S]},
+{name:"Off-page SEO",desc:"Building trust and authority beyond the website.",url:"off-page-seo.html",r:[S,S,S,S]},
+{name:"Local SEO",desc:"Helping businesses get found by people nearby.",url:"local-seo.html",r:[S,S,S,S]},
+{name:"AEO",desc:"Getting content into AI-powered answers and snippets.",url:"aeo.html",r:[S,S,S,S]},
+{name:"GEO",desc:"Improving visibility in generative AI search results.",url:"geo.html",r:[S,S,S,S]}
+];
+function esc(x){return String(x).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function ini(n){return n.split(/\s+/).map(function(w){return w[0]||""}).join("").slice(0,2).toUpperCase()}
+var pin='<svg viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>';
+var arrow='<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+document.getElementById("flow").innerHTML=SERVICES.map(function(v){
+  var cards=v.r.map(function(r){
+    return '<article class="rv-card">'+
+    '<div class="rv-top"><span class="rv-qb">\u201C</span>'+(r.s?'<span class="rv-sample">Sample</span>':'')+'</div>'+
+    '<div class="rv-stars" aria-label="5 out of 5 stars">\u2605\u2605\u2605\u2605\u2605</div>'+
+    '<p class="rv-text">'+esc(r.t)+'</p>'+
+    '<div class="rv-foot"><span class="rv-avatar">'+esc(ini(r.n))+'</span><span class="rv-who"><b>'+esc(r.n)+'</b><i>'+pin+esc(r.c)+'</i></span></div></article>';
+  }).join("");
+  return '<section class="rv-step"><div class="rv-sh"><div><h2>'+esc(v.name)+'</h2><p>'+esc(v.desc)+'</p></div>'+
+    '<a class="rv-link" href="'+v.url+'">View service '+arrow+'</a></div>'+
+    '<div class="rv-row">'+cards+'</div></section>';
+}).join("");
+
+/* simple fade-up when cards scroll into view */
+var rm=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.querySelectorAll(".rv-row").forEach(function(row){
+  var cs=row.querySelectorAll(".rv-card");
+  cs.forEach(function(c,i){c.style.setProperty("--d",(i*0.1)+"s")});
+  function show(){cs.forEach(function(c){c.classList.add("in")})}
+  if("IntersectionObserver" in window&&!rm){
+    new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){show();o.disconnect()}})},{threshold:.15}).observe(row);
+  }else{show()}
+});
+</script>
 </body>
 </html>
