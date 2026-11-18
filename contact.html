@@ -15,26 +15,21 @@
 <header><div class="wrap"><a class="logo" href="index.html">Nayeem Origin</a><nav aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="case-studies.html">Case Studies</a><a href="reviews.html">Reviews</a><a href="contact.html" aria-current="page">Contact</a></nav><a class="btn sm" href="https://wa.me/8801758536741">Hire Me</a></div></header>
 <main><div class="wrap">
 <section class="nf-row">
-
   <div>
     <h1>Contact</h1>
     <p>The fastest way to reach me is WhatsApp. Send your website address and what you want to achieve.</p>
     <p><a class="btn" href="https://wa.me/8801758536741">Chat on WhatsApp</a></p>
   </div>
-
   <form class="nf-form" id="nfForm" novalidate>
     <input type="hidden" name="access_key" value="ebf0ca61-79d0-4f39-977e-4195963b4278">
     <input type="hidden" name="subject" value="New message from Nayeem Origin website">
     <input type="checkbox" name="botcheck" class="nf-hp" tabindex="-1" autocomplete="off">
-
     <input type="text"  name="name"    placeholder="Your Name"    autocomplete="name"  required>
     <input type="email" name="email"   placeholder="Your Email"   autocomplete="email" required>
     <textarea           name="message" placeholder="Your Message" required></textarea>
-
     <button type="submit">Send Message</button>
     <p class="nf-status" id="nfStatus" role="status" aria-live="polite"></p>
   </form>
-
 </section>
 </div></main>
 <footer><div class="wrap fcols">
@@ -43,26 +38,21 @@
 <div><h3>Expertise</h3><a href="seo-audit.html">SEO Audit</a><a href="technical-seo.html">Technical SEO</a><a href="keyword-research.html">Keyword Research</a><a href="on-page-seo.html">On-page SEO</a><a href="off-page-seo.html">Off-page SEO</a><a href="local-seo.html">Local SEO</a><a href="aeo.html">AEO</a><a href="geo.html">GEO</a></div>
 <div><h3>Connect</h3><a href="https://wa.me/8801758536741">WhatsApp</a><a href="https://www.facebook.com/nayeemorigin">Facebook</a><a href="https://www.instagram.com/nayeemorigin">Instagram</a><a href="https://www.pinterest.com/nayeemorigin/">Pinterest</a></div>
 </div><div class="wrap copy">&copy; 2026 Nayeem Origin. All rights reserved.</div></footer>
-
 <script>
   (function () {
     var form = document.getElementById('nfForm');
     var status = document.getElementById('nfStatus');
     var btn = form.querySelector('button');
-
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       status.className = 'nf-status';
-
       if (!form.checkValidity()) {
         status.textContent = 'Please fill in your name, a valid email, and a message.';
         status.classList.add('err');
         return;
       }
-
       btn.disabled = true;
       btn.textContent = 'Sending...';
-
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
