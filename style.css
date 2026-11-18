@@ -85,3 +85,73 @@ footer, footer *, .copy, .fcols { border-top: 0 !important; border-bottom: 0 !im
 .social svg { width: 22px; height: 22px; fill: none; stroke: #2563eb; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .social a:hover { background: #2563eb; transform: translateY(-3px); }
 .social a:hover svg { stroke: #fff; }
+  /* ===== Contact form styles ===== */
+  .nf-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .nf-row > .nf-form { justify-self: end; }
+  @media (max-width: 800px) {
+    .nf-row { grid-template-columns: 1fr; gap: 32px; }
+    .nf-row > .nf-form { justify-self: stretch; max-width: none; }
+  }
+
+  .nf-form {
+    --nf-field-bg: #faf6e8;
+    --nf-field-border: #e8e1c9;
+    --nf-text: #2b2b2b;
+    --nf-btn-from: #2f6ae0;
+    --nf-btn-to: #1b4fc4;
+
+    width: 100%;
+    max-width: 500px;
+    display: grid;
+    gap: 14px;
+    font-family: inherit;
+  }
+  .nf-form input,
+  .nf-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    font: inherit;
+    font-size: 15px;
+    color: var(--nf-text);
+    background: var(--nf-field-bg);
+    border: 1px solid var(--nf-field-border);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .nf-form textarea { min-height: 120px; resize: vertical; }
+  .nf-form input::placeholder,
+  .nf-form textarea::placeholder { color: #8a8574; }
+  .nf-form input:focus,
+  .nf-form textarea:focus {
+    border-color: var(--nf-btn-to);
+    box-shadow: 0 0 0 3px rgba(27, 79, 196, .18);
+  }
+  .nf-form button {
+    padding: 15px 20px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #fff;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--nf-btn-from), var(--nf-btn-to));
+    transition: transform .15s, filter .15s;
+  }
+  .nf-form button:hover { filter: brightness(1.06); }
+  .nf-form button:active { transform: translateY(1px); }
+  .nf-form button:disabled { opacity: .6; cursor: wait; }
+  .nf-form button:focus-visible { outline: 3px solid var(--nf-btn-to); outline-offset: 3px; }
+  .nf-status { margin: 0; min-height: 1.4em; font-size: 14px; }
+  .nf-status.ok { color: #1f7a3d; }
+  .nf-status.err { color: #b3261e; }
+  .nf-hp { position: absolute; left: -9999px; }
