@@ -10,12 +10,104 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* ===== Contact form styles ===== */
+  .nf-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .nf-row > .nf-form { justify-self: end; }
+  @media (max-width: 800px) {
+    .nf-row { grid-template-columns: 1fr; gap: 32px; }
+    .nf-row > .nf-form { justify-self: stretch; max-width: none; }
+  }
+
+  .nf-form {
+    --nf-field-bg: #faf6e8;
+    --nf-field-border: #e8e1c9;
+    --nf-text: #2b2b2b;
+    --nf-btn-from: #2f6ae0;
+    --nf-btn-to: #1b4fc4;
+
+    width: 100%;
+    max-width: 500px;
+    display: grid;
+    gap: 14px;
+    font-family: inherit;
+  }
+  .nf-form input,
+  .nf-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    font: inherit;
+    font-size: 15px;
+    color: var(--nf-text);
+    background: var(--nf-field-bg);
+    border: 1px solid var(--nf-field-border);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .nf-form textarea { min-height: 120px; resize: vertical; }
+  .nf-form input::placeholder,
+  .nf-form textarea::placeholder { color: #8a8574; }
+  .nf-form input:focus,
+  .nf-form textarea:focus {
+    border-color: var(--nf-btn-to);
+    box-shadow: 0 0 0 3px rgba(27, 79, 196, .18);
+  }
+  .nf-form button {
+    padding: 15px 20px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #fff;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--nf-btn-from), var(--nf-btn-to));
+    transition: transform .15s, filter .15s;
+  }
+  .nf-form button:hover { filter: brightness(1.06); }
+  .nf-form button:active { transform: translateY(1px); }
+  .nf-form button:disabled { opacity: .6; cursor: wait; }
+  .nf-form button:focus-visible { outline: 3px solid var(--nf-btn-to); outline-offset: 3px; }
+  .nf-status { margin: 0; min-height: 1.4em; font-size: 14px; }
+  .nf-status.ok { color: #1f7a3d; }
+  .nf-status.err { color: #b3261e; }
+  .nf-hp { position: absolute; left: -9999px; }
+</style>
 </head>
 <body>
 <header><div class="wrap"><a class="logo" href="index.html">Nayeem Origin</a><nav aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="case-studies.html">Case Studies</a><a href="reviews.html">Reviews</a><a href="contact.html" aria-current="page">Contact</a></nav><a class="btn sm" href="https://wa.me/8801758536741">Hire Me</a></div></header>
 <main><div class="wrap">
-<section><h1>Contact</h1><p>The fastest way to reach me is WhatsApp. Send your website address and what you want to achieve.</p>
-<p><a class="btn" href="https://wa.me/8801758536741">Chat on WhatsApp</a></p>
+<section class="nf-row">
+
+  <div>
+    <h1>Contact</h1>
+    <p>The fastest way to reach me is WhatsApp. Send your website address and what you want to achieve.</p>
+    <p><a class="btn" href="https://wa.me/8801758536741">Chat on WhatsApp</a></p>
+  </div>
+
+  <form class="nf-form" id="nfForm" novalidate>
+    <input type="hidden" name="access_key" value="ebf0ca61-79d0-4f39-977e-4195963b4278">
+    <input type="hidden" name="subject" value="New message from Nayeem Origin website">
+    <input type="checkbox" name="botcheck" class="nf-hp" tabindex="-1" autocomplete="off">
+
+    <input type="text"  name="name"    placeholder="Your Name"    autocomplete="name"  required>
+    <input type="email" name="email"   placeholder="Your Email"   autocomplete="email" required>
+    <textarea           name="message" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+    <p class="nf-status" id="nfStatus" role="status" aria-live="polite"></p>
+  </form>
+
+</section>
 </div></main>
 <footer><div class="wrap fcols">
 <div><a class="logo" href="index.html">Nayeem Origin</a><p>SEO specialist in Bangladesh helping websites grow organic traffic and visibility.</p></div>
@@ -23,5 +115,51 @@
 <div><h3>Expertise</h3><a href="seo-audit.html">SEO Audit</a><a href="technical-seo.html">Technical SEO</a><a href="keyword-research.html">Keyword Research</a><a href="on-page-seo.html">On-page SEO</a><a href="off-page-seo.html">Off-page SEO</a><a href="local-seo.html">Local SEO</a><a href="aeo.html">AEO</a><a href="geo.html">GEO</a></div>
 <div><h3>Connect</h3><a href="https://wa.me/8801758536741">WhatsApp</a><a href="https://www.facebook.com/nayeemorigin">Facebook</a><a href="https://www.instagram.com/nayeemorigin">Instagram</a><a href="https://www.pinterest.com/nayeemorigin/">Pinterest</a></div>
 </div><div class="wrap copy">&copy; 2026 Nayeem Origin. All rights reserved.</div></footer>
+
+<script>
+  (function () {
+    var form = document.getElementById('nfForm');
+    var status = document.getElementById('nfStatus');
+    var btn = form.querySelector('button');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      status.className = 'nf-status';
+
+      if (!form.checkValidity()) {
+        status.textContent = 'Please fill in your name, a valid email, and a message.';
+        status.classList.add('err');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data.success) {
+            status.textContent = 'Thanks! Your message was sent. I will reply soon.';
+            status.classList.add('ok');
+            form.reset();
+          } else {
+            throw new Error(data.message || 'Failed');
+          }
+        })
+        .catch(function () {
+          status.textContent = 'Message could not be sent. Please try again or use WhatsApp.';
+          status.classList.add('err');
+        })
+        .finally(function () {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+        });
+    });
+  })();
+</script>
 </body>
 </html>
