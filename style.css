@@ -159,12 +159,17 @@ a,a:hover{text-decoration:none!important}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .cs-wrap{padding:2.6rem 0 1rem}
 /* welcome banner */
-.cs-banner{position:relative;overflow:hidden;display:grid;grid-template-columns:96px 1fr 96px;align-items:center;gap:1rem;min-height:170px;padding:1.6rem 2rem;border-radius:18px;background:linear-gradient(115deg,#f5e3f6 0%,#e4e6ff 55%,#d9e3ff 100%);border:1px solid #e6e9fb;box-shadow:0 6px 22px rgba(79,70,229,.08);opacity:0;animation:csUp .7s ease forwards}
+.cs-banner{position:relative;overflow:hidden;display:grid;grid-template-columns:110px 1fr 110px;align-items:center;gap:1rem;min-height:170px;padding:1.6rem 2rem;border-radius:18px;background:linear-gradient(115deg,#f5e3f6 0%,#e4e6ff 55%,#d9e3ff 100%);border:1px solid #e6e9fb;box-shadow:0 6px 22px rgba(79,70,229,.08);opacity:0;animation:csUp .7s ease forwards}
 .cs-banner::before{content:"";position:absolute;right:-70px;bottom:-110px;width:260px;height:260px;border-radius:50%;background:#c4cffa;opacity:.75}
 .cs-banner::after{content:"";position:absolute;right:210px;top:26px;width:54px;height:54px;border-radius:50%;background:#d3dafc;opacity:.8}
-.cs-avatar{position:relative;z-index:1;width:96px;height:96px;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,#e8873f,#c4602a);box-shadow:0 0 0 4px rgba(255,255,255,.75),0 10px 22px rgba(196,96,42,.3)}
-.cs-avatar img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.cs-avatar{position:relative;z-index:1;width:110px;height:120px}
+.cs-avatar img{width:100%;height:100%;object-fit:contain;display:block}
+.cs-center{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:.35rem;text-align:center}
+.cs-brand{margin:0;max-width:none;color:#6d5fd0;font:600 1.05rem "Bricolage Grotesque",sans-serif;letter-spacing:.04em}
 .cs-name{margin:0;max-width:none;text-align:center;color:#3b2f8f;font:700 clamp(1.4rem,3.2vw,2.1rem) "Bricolage Grotesque",sans-serif;overflow-wrap:anywhere}
+.cs-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:.35rem;padding:.5rem 1rem;border-radius:999px;background:rgba(255,255,255,.8);color:#4f46e5;font:600 .92rem "Bricolage Grotesque",sans-serif;box-shadow:0 4px 12px rgba(79,70,229,.14);transition:transform .2s ease,background .2s ease}
+.cs-link:hover{background:#fff;transform:translateY(-2px)}
+.cs-link svg{width:15px;height:15px;fill:none;stroke:#4f46e5;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 
 .cs-center{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:.35rem;text-align:center}
 .cs-brand{margin:0;max-width:none;color:#6d5fd0;font:600 1.05rem "Bricolage Grotesque",sans-serif;letter-spacing:.04em}
